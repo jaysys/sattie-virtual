@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT_DIR"
 
-PID_FILE="$ROOT_DIR/run/satti.pid"
+PID_FILE="$ROOT_DIR/run/sattie.pid"
 
 if [[ ! -f "$PID_FILE" ]]; then
   echo "[stop] pid file not found. server may already be stopped."

@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>위성영상 이미지포맷 L0~L4 Explorer</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7611240025188124"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/ui/static/styles.css" />
+
+</head>
+<body>
+  <div class="wrap">
+    <h1>위성영상 이미지포맷 L0~L4 Explorer</h1>
+    <p class="intro">레벨(L0~L4)별로 영상이미지 정보가 어떻게 확장되는지와, 선택한 이미지포맷에 추가로 포함된 부가정보(좌표, RPC/DEM, 타일, 분류 레이어)가 뭐가 있는지 한 화면에서 한번에 확인할 수 있습니다.</p>
+
+    <section class="section-group">
+    <section class="card">
+      <div class="row" style="justify-content:space-between; align-items:center;">
+        <h2>랜덤 시드기반 샘플 LO~L4 이미지</h2>
+        <button class="ghost" onclick="refreshStatus()">상태/폴더 새로고침</button>
+      </div>
+      <div id="healthBanner" class="muted">연결 확인 중...</div>
+        <div class="stats">
+        <div class="chip"><div class="k">전체</div><div class="v" id="sTotal">-</div></div>
+        <div class="chip"><div class="k">L0</div><div class="v" id="sL0">-</div></div>
+        <div class="chip"><div class="k">L1</div><div class="v" id="sL1">-</div></div>
+        <div class="chip"><div class="k">L2</div><div class="v" id="sL2">-</div></div>
+        <div class="chip"><div class="k">L3/L4</div><div class="v" id="sL34">-</div></div>
+      </div>
+        <div class="admin-box">
+          <div class="admin-layout">
+            <div>
+              <div class="row">
+              <button id="rebuildBtn" onclick="rebuildSamples()">샘플위성영상생성</button>
+              <button class="secondary" onclick="deleteSamples()">샘플 모두 삭제</button>
+            </div>
+            <div class="muted" id="adminStatus" style="margin-top:6px;">샘플 스토어 정보를 불러오는 중...</div>
+            <div class="folder-list" id="folderList">-</div>
+            </div>
+            <aside class="admin-api">
+              <h3>Raw API 응답</h3>
+              <pre id="detailOut">ready</pre>
+            </aside>
+          </div>
+        </div>
+    </section>
+
+    <div class="layout" style="margin-top:14px;">
+      <section class="card">
+        <h2>랜덤 시드 기반 생성 샘플 이미지</h2>
+        <div class="row filter-row">
+          <div class="filter-item-short">
+            <label>sensor</label>
+            <select id="sensor">
+              <option value="">(all)</option>
+              <option value="eo">eo</option>
+              <option value="sar">sar</option>
+            </select>
+          </div>
+          <div class="filter-item-short">
+            <label>level</label>
+            <select id="level">
+              <option value="">(all)</option>
+              <option value="L0">L0</option>
+              <option value="L1">L1</option>
+              <option value="L2">L2</option>
+              <option value="L3">L3</option>
+              <option value="L4">L4</option>
+            </select>
+          </div>
+          <div class="filter-item-short">
+            <label>fmt</label>
+            <select id="fmt">
+              <option value="">(all)</option>
+              <option value="geotiff">geotiff</option>
+              <option value="ceos">ceos</option>
+              <option value="tiled-geotiff">tiled-geotiff</option>
+              <option value="index-map">index-map</option>
+              <option value="classified-raster">classified-raster</option>
+            </select>
+          </div>
+          <div class="filter-item-long">
+            <label>q</label>
+            <input id="q" placeholder="satellite / summary 검색" />
+          </div>
+        </div>
+        <div class="row" style="margin-top:8px;">
+          <button onclick="callImages()">선택한 이미지 목록 조회</button>
+          <button class="secondary" onclick="resetFilters()">필터 초기화</button>
+        </div>
+        <div class="images-list" id="imagesList"></div>
+      </section>
+
+      <section class="card">
+        <h2>선택한 샘플 이미지 상세 내역(설명)</h2>
+        <div class="preview-box">
+          <div class="muted" style="font-size:12px; margin-bottom:6px;">웹 미리보기</div>
+          <div id="previewWrap" class="muted">선택 이미지 없음</div>
+        </div>
+
+        <div class="row">
+          <div style="flex:1; min-width:0;">
+            <label>image_id</label>
+            <input id="pid" style="width:100%;" placeholder="목록에서 자동 선택됩니다." />
+          </div>
+          <div style="display:flex; align-items:flex-end;">
+            <button onclick="callDetail()">상세 조회</button>
+          </div>
+        </div>
+
+        <div class="steps" id="levelSteps">
+          <div class="step" data-level="L0">L0</div>
+          <div class="step" data-level="L1">L1</div>
+          <div class="step" data-level="L2">L2</div>
+          <div class="step" data-level="L3">L3</div>
+          <div class="step" data-level="L4">L4</div>
+        </div>
+
+        <div class="kv" id="imageKv"></div>
+        <div style="margin-top:8px;">
+          <div class="muted" style="font-size:12px; margin-bottom:6px;">이 레벨에서 포함되는 부가정보</div>
+          <div id="extraInfo"></div>
+        </div>
+        <div style="margin-top:8px;">
+          <div class="muted" style="font-size:12px; margin-bottom:6px;">권장 활용/뷰어</div>
+          <div id="usageInfo"></div>
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+          <button class="secondary" onclick="callDownload()">파일 다운로드</button>
+        </div>
+        <div id="downloadHint" class="muted" style="margin-top:6px;">선택한 이미지를 원본 파일로 내려받습니다.</div>
+      </section>
+    </div>
+    </section>
+
+    <section class="section-group">
+    <section class="card" style="margin-top:14px;">
+      <h2>OpenStreetMap 기반 생성 샘플 이미지</h2>
+      <div class="row" style="justify-content:space-between; align-items:center;">
+        <p class="muted" style="margin:0;">OpenStreetMap 타일 기반으로 L0~L4 샘플을 즉시 생성하고 결과를 확인합니다.</p>
+        <button class="ghost" onclick="refreshOsmStatus()">상태/폴더 새로고침</button>
+      </div>
+      <div id="osmHealthBanner" class="muted">OSM 상태 확인 중...</div>
+      <div class="stats">
+        <div class="chip"><div class="k">전체</div><div class="v" id="osmTotal">-</div></div>
+        <div class="chip"><div class="k">L0</div><div class="v" id="osmL0">-</div></div>
+        <div class="chip"><div class="k">L1</div><div class="v" id="osmL1">-</div></div>
+        <div class="chip"><div class="k">L2</div><div class="v" id="osmL2">-</div></div>
+        <div class="chip"><div class="k">L3/L4</div><div class="v" id="osmL34">-</div></div>
+      </div>
+      <div class="admin-box">
+        <div class="admin-layout">
+          <div>
+            <div class="row filter-row osm-controls">
+              <div class="filter-item-long">
+                <label>South Korea Preset</label>
+                <select id="osmPresetKR">
+                  <option value="">(select)</option>
+                  <option value="37.5665,126.9780">Seoul</option>
+                  <option value="35.1796,129.0756">Busan</option>
+                  <option value="37.4563,126.7052">Incheon</option>
+                  <option value="35.8714,128.6014">Daegu</option>
+                  <option value="35.1595,126.8526">Gwangju</option>
+                  <option value="36.3504,127.3845">Daejeon</option>
+                  <option value="35.5384,129.3114">Ulsan</option>
+                  <option value="37.3417,126.8320">Suwon</option>
+                  <option value="33.4996,126.5312">Jeju City</option>
+                  <option value="37.8854,127.7298">Chuncheon</option>
+                </select>
+              </div>
+              <div class="filter-item-long">
+                <label>North Korea Preset</label>
+                <select id="osmPresetKP">
+                  <option value="">(select)</option>
+                  <option value="39.0392,125.7625">Pyongyang</option>
+                  <option value="39.1528,127.4436">Wonsan</option>
+                  <option value="40.1000,124.4000">Sinuiju</option>
+                  <option value="41.8036,129.7758">Chongjin</option>
+                  <option value="38.5070,125.7550">Haeju</option>
+                  <option value="39.9183,127.5364">Hamhung</option>
+                  <option value="40.6694,129.1894">Kimchaek</option>
+                  <option value="39.0339,125.7532">Nampo</option>
+                  <option value="40.9695,126.5875">Kanggye</option>
+                  <option value="37.9700,126.5540">Kaesong</option>
+                </select>
+              </div>
+              <div class="filter-item-short">
+                <label>latitude</label>
+                <input id="osmLat" type="number" step="0.0001" value="37.5665" />
+              </div>
+              <div class="filter-item-short">
+                <label>longitude</label>
+                <input id="osmLon" type="number" step="0.0001" value="126.9780" />
+              </div>
+              <div class="filter-item-short osm-zoom-box">
+                <label>zoom</label>
+                <input id="osmZoom" type="number" min="0" max="19" value="14" />
+              </div>
+              <div class="filter-item-short osm-sensor-box">
+                <label>sensor</label>
+                <select id="osmSensor">
+                  <option value="eo">eo</option>
+                  <option value="sar">sar</option>
+                </select>
+              </div>
+            </div>
+            <div class="row" style="margin-top:8px;">
+              <button id="osmGenerateBtn" onclick="generateOsmImages()">OSM 이미지 생성</button>
+              <button id="osmDeleteBtn" class="secondary" onclick="deleteOsmSamples()">OSM 샘플 삭제</button>
+            </div>
+            <div id="osmAdminStatus" class="muted" style="margin-top:6px;">OSM 스토어 정보를 불러오는 중...</div>
+            <div class="folder-list" id="osmFolderList">-</div>
+          </div>
+          <aside class="admin-api">
+            <h3>Raw API 응답</h3>
+            <pre id="osmOut">ready</pre>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout" style="margin-top:14px;">
+      <section class="card">
+        <h2>OSM 생성 샘플 이미지 선택</h2>
+        <div class="row filter-row">
+          <div class="filter-item-short">
+            <label>sensor</label>
+            <select id="osmFilterSensor">
+              <option value="">(all)</option>
+              <option value="eo">eo</option>
+              <option value="sar">sar</option>
+            </select>
+          </div>
+          <div class="filter-item-short">
+            <label>level</label>
+            <select id="osmFilterLevel">
+              <option value="">(all)</option>
+              <option value="L0">L0</option>
+              <option value="L1">L1</option>
+              <option value="L2">L2</option>
+              <option value="L3">L3</option>
+              <option value="L4">L4</option>
+            </select>
+          </div>
+          <div class="filter-item-short">
+            <label>fmt</label>
+            <select id="osmFilterFmt">
+              <option value="">(all)</option>
+              <option value="geotiff">geotiff</option>
+              <option value="ceos">ceos</option>
+              <option value="tiled-geotiff">tiled-geotiff</option>
+              <option value="index-map">index-map</option>
+              <option value="classified-raster">classified-raster</option>
+            </select>
+          </div>
+          <div class="filter-item-long">
+            <label>q</label>
+            <input id="osmFilterQ" placeholder="request_id / summary / satellite 검색" />
+          </div>
+        </div>
+        <div class="row" style="margin-top:8px;">
+          <button onclick="callOsmImages()">선택한 OSM 이미지 목록 조회</button>
+          <button class="secondary" onclick="resetOsmFilters()">필터 초기화</button>
+        </div>
+        <section style="margin-top:10px;">
+          <div class="muted" style="font-size:12px;">생성된 레벨별 이미지</div>
+          <div id="osmImagesList" class="images-list"><span class="muted">생성 결과가 없습니다.</span></div>
+        </section>
+      </section>
+
+      <section class="card">
+        <h2>선택한 OSM 이미지 상세 내역(설명)</h2>
+        <section>
+          <div class="preview-box">
+            <div class="muted" style="font-size:12px; margin-bottom:6px;">OSM 결과 미리보기</div>
+            <div id="osmPreviewWrap" class="muted">선택 이미지 없음</div>
+          </div>
+          <div class="kv" id="osmImageKv"></div>
+          <div class="row" style="margin-top:10px;">
+            <button class="secondary" onclick="downloadSelectedOsm()">선택 파일 다운로드</button>
+          </div>
+          <div id="osmDownloadHint" class="muted" style="margin-top:6px;">생성 후 레벨을 선택하면 다운로드할 수 있습니다.</div>
+        </section>
+      </section>
+    </div>
+    </section>
+
+    <section class="card" style="margin-top:14px;">
+      <h2>이미지 레벨별 정보 비교표</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Level</th><th>대표 포맷</th><th>이미지/신호 상태</th><th>추가되는 부가정보</th><th>주요 활용</th><th>비고/예시</th>
+            </tr>
+          </thead>
+          <tbody id="levelGuideBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <div id="jobModal" class="job-modal" role="dialog" aria-modal="true" aria-live="polite">
+    <div class="job-panel">
+      <div class="job-head"><span class="job-spin"></span><span id="jobTitle">백그라운드 작업 진행 중</span></div>
+      <div id="jobMsg" class="muted" style="margin-top:6px;">작업이 완료될 때까지 잠시 기다려주세요.</div>
+      <div class="job-time">
+        <div class="muted">현재 시각</div><div id="jobNow">-</div>
+        <div class="muted">경과 시간</div><div id="jobElapsed">00:00</div>
+      </div>
+      <div class="row" style="margin-top:10px; justify-content:flex-end;">
+        <button id="jobCloseBtn" class="secondary" onclick="closeJobModal()" disabled>닫기</button>
+      </div>
+    </div>
+  </div>
+  <div id="confirmModal" class="confirm-modal" role="dialog" aria-modal="true">
+    <div class="confirm-panel">
+      <div class="confirm-title" id="confirmTitle">샘플 삭제 확인</div>
+      <div class="muted" id="confirmMsg" style="margin-top:8px;">mock_store 아래 생성 샘플을 모두 삭제합니다. 계속할까요?</div>
+      <div class="row" style="margin-top:12px; justify-content:flex-end;">
+        <button class="secondary" onclick="resolveDeleteConfirm(false)">취소</button>
+        <button onclick="resolveDeleteConfirm(true)">삭제 진행</button>
+      </div>
+    </div>
+  </div>
+
+    <script src="/ui/static/app.js"></script>
+
+</body>
+</html>

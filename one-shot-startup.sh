@@ -4,8 +4,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT_DIR"
 
-PID_FILE="$ROOT_DIR/run/satti.pid"
-LOG_FILE="$ROOT_DIR/logs/satti.log"
+PID_FILE="$ROOT_DIR/run/sattie.pid"
+LOG_FILE="$ROOT_DIR/logs/sattie.log"
 PORT="${PORT:-6001}"
 HOST="${HOST:-0.0.0.0}"
 
@@ -27,8 +27,8 @@ fi
 source "$ROOT_DIR/venv/bin/activate"
 mkdir -p "$ROOT_DIR/logs" "$ROOT_DIR/run"
 
-echo "[startup] starting uvicorn app.satti_api:app on ${HOST}:${PORT}"
-nohup "$ROOT_DIR/venv/bin/uvicorn" app.satti_api:app \
+echo "[startup] starting uvicorn app.sattie_api:app on ${HOST}:${PORT}"
+nohup "$ROOT_DIR/venv/bin/uvicorn" app.sattie_api:app \
   --host "$HOST" \
   --port "$PORT" \
   --reload \

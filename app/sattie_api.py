@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import html
 import re
+import unicodedata
 from urllib.parse import quote
 
 from fastapi import FastAPI, HTTPException, Path as ApiPath, Query
@@ -18,7 +19,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 import app.core as core_module
-from app.md_viwer import render_markdown_html
+from app.md_viwer import render_guide_page
 from app.core import *  # noqa: F403
 
 app = FastAPI(
@@ -98,11 +99,15 @@ def _guide_markdown_files() -> list[Path]:
     if not GUIDE_DIR.exists():
         return []
     files = [p for p in GUIDE_DIR.rglob("*.md") if p.is_file()]
+
+    def norm_rel(p: Path) -> str:
+        return unicodedata.normalize("NFC", p.relative_to(GUIDE_DIR).as_posix())
+
     return sorted(
         files,
         key=lambda p: (
-            0 if p.relative_to(GUIDE_DIR).as_posix().lower() == "readme.md" else 1,
-            p.relative_to(GUIDE_DIR).as_posix().lower(),
+            0 if norm_rel(p).lower() == "readme.md" else 1,
+            norm_rel(p).lower(),
         ),
     )
 
@@ -1077,8 +1082,9 @@ def guide_index() -> str:
     items: list[str] = []
     for fp in files:
         rel = fp.relative_to(GUIDE_DIR).as_posix()
+        display_rel = unicodedata.normalize("NFC", rel)
         href = "/guide/" + quote(rel, safe="/")
-        items.append(f"<li><a href='{href}'>{html.escape(rel)}</a></li>")
+        items.append(f"<li><a href='{href}'>{html.escape(display_rel)}</a></li>")
     return (
         "<html><body style='font-family:sans-serif;padding:20px;line-height:1.6;'>"
         "<p><a href='/'>&larr; 메인 홈페이지</a></p>"
@@ -1103,120 +1109,8 @@ def guide_index() -> str:
 def guide_view(guide_path: str) -> str:
     fp = _resolve_guide_file(guide_path)
     md_text = fp.read_text(encoding="utf-8")
-    body = render_markdown_html(md_text)
     rel = fp.relative_to(GUIDE_DIR).as_posix()
-    return (
-        "<html><head>"
-        "<meta charset='utf-8'/>"
-        "<style>"
-        "body{font-family:sans-serif;padding:20px;line-height:1.6;}"
-        "pre{background:#f7f7f8;border:1px solid #e5e7eb;border-radius:8px;padding:12px;overflow:auto;}"
-        "code{background:#f3f4f6;border-radius:4px;padding:2px 4px;}"
-        ".math-block{margin:14px 0;overflow:auto;}"
-        "pre.mermaid{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px;}"
-        ".md-image-link{display:inline-block;margin:10px 0;}"
-        ".md-image{display:block;max-width:min(520px,100%);width:100%;height:auto;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:zoom-in;}"
-        "#imgModal{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9999;padding:24px;}"
-        "#imgModal.show{display:flex;}"
-        "#imgModal img{max-width:95vw;max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.45);background:#111;}"
-        "#imgModal .close{position:absolute;top:12px;right:16px;color:#fff;font-size:30px;line-height:1;cursor:pointer;}"
-        "</style>"
-        "<script>"
-        "window.MathJax={"
-        "tex:{inlineMath:[['$','$'],['\\\\(','\\\\)']],displayMath:[['$$','$$'],['\\\\[','\\\\]']],processEscapes:true},"
-        "chtml:{displayAlign:'left',displayIndent:'0'},"
-        "svg:{displayAlign:'left',displayIndent:'0',fontCache:'global'},"
-        "startup:{typeset:false}"
-        "};"
-        "</script>"
-        "<script>"
-        "window.addEventListener('load',function(){"
-        "  var sources=["
-        "    'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js',"
-        "    'https://unpkg.com/mathjax@3/es5/tex-svg.js',"
-        "    'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js'"
-        "  ];"
-        "  var loaded=false;"
-        "  var loadMathJax=function(idx){"
-        "    if(idx>=sources.length){return;}"
-        "    var s=document.createElement('script');"
-        "    s.async=true; s.src=sources[idx];"
-        "    s.onload=function(){loaded=true;};"
-        "    s.onerror=function(){loadMathJax(idx+1);};"
-        "    document.head.appendChild(s);"
-        "  };"
-        "  loadMathJax(0);"
-        "  var tryTypeset=function(){"
-        "    if(window.MathJax && window.MathJax.typesetPromise){"
-        "      window.MathJax.typesetPromise().catch(function(){});"
-      "      return true;"
-        "    }"
-        "    return false;"
-        "  };"
-        "  if(!tryTypeset()){"
-        "    var n=0; var t=setInterval(function(){n+=1; if(tryTypeset()||n>50){clearInterval(t);}},200);"
-        "  }"
-        "  var mermaidSources=["
-        "    'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js',"
-        "    'https://unpkg.com/mermaid@10/dist/mermaid.min.js',"
-        "    'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js'"
-        "  ];"
-        "  var renderMermaid=function(){"
-        "    if(!window.mermaid){return false;}"
-        "    try{"
-        "      window.mermaid.initialize({startOnLoad:false,securityLevel:'loose'});"
-        "      window.mermaid.run({querySelector:'.mermaid'});"
-        "      return true;"
-        "    }catch(e){return false;}"
-        "  };"
-        "  var loadMermaid=function(idx){"
-        "    if(idx>=mermaidSources.length){return;}"
-        "    var s=document.createElement('script');"
-        "    s.async=true; s.src=mermaidSources[idx];"
-        "    s.onload=function(){ if(!renderMermaid()){ setTimeout(renderMermaid, 200); } };"
-        "    s.onerror=function(){ loadMermaid(idx+1); };"
-        "    document.head.appendChild(s);"
-        "  };"
-        "  if(!renderMermaid()){"
-        "    loadMermaid(0);"
-        "    var k=0; var mt=setInterval(function(){k+=1; if(renderMermaid()||k>50){clearInterval(mt);}},200);"
-        "  }"
-        "});"
-        "</script>"
-        "</head><body>"
-        "<p><a href='/guide'>&larr; 목록으로</a></p>"
-        f"<h2>{html.escape(rel)}</h2>"
-        "<hr/>"
-        f"{body}"
-        "<div id='imgModal' aria-hidden='true'><span class='close' title='닫기'>&times;</span><img alt='preview'/></div>"
-        "<script>"
-        "(function(){"
-        "  const modal=document.getElementById('imgModal');"
-        "  if(!modal) return;"
-        "  const modalImg=modal.querySelector('img');"
-        "  const close=modal.querySelector('.close');"
-        "  document.querySelectorAll('.md-image-link').forEach(function(a){"
-        "    a.addEventListener('click', function(e){"
-        "      e.preventDefault();"
-        "      const src=a.getAttribute('data-full')||a.getAttribute('href');"
-        "      if(!src) return;"
-        "      modalImg.setAttribute('src', src);"
-        "      modal.classList.add('show');"
-        "      modal.setAttribute('aria-hidden','false');"
-        "    });"
-        "  });"
-        "  const hide=function(){"
-        "    modal.classList.remove('show');"
-        "    modal.setAttribute('aria-hidden','true');"
-        "    modalImg.setAttribute('src','');"
-        "  };"
-        "  if(close) close.addEventListener('click', hide);"
-        "  modal.addEventListener('click', function(e){ if(e.target===modal) hide(); });"
-        "  window.addEventListener('keydown', function(e){ if(e.key==='Escape') hide(); });"
-        "})();"
-        "</script>"
-        "</body></html>"
-    )
+    return render_guide_page(rel=rel, md_text=md_text)
 
 
 @app.get(

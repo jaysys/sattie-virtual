@@ -6,7 +6,7 @@
     "category": "docs",
     "tags": [],
     "public_url": "/p/api-client-guide",
-    "updated_at": "2026-03-07T00:09:25Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 759,
     "reading_minutes": 4,
     "source_path": "docs/API_CLIENT_GUIDE.md",
@@ -127,7 +127,7 @@
     "category": "docs",
     "tags": [],
     "public_url": "/p/maintainer-guide",
-    "updated_at": "2026-03-07T00:17:45Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 722,
     "reading_minutes": 3,
     "source_path": "docs/MAINTAINER_GUIDE.md",
@@ -273,7 +273,7 @@
     "category": "docs",
     "tags": [],
     "public_url": "/p/system-design",
-    "updated_at": "2026-03-07T00:17:50Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 1159,
     "reading_minutes": 5,
     "source_path": "docs/SYSTEM_DESIGN.md",
@@ -449,7 +449,7 @@
     "category": "docs",
     "tags": [],
     "public_url": "/p/work-plan",
-    "updated_at": "2026-03-07T00:09:25Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 251,
     "reading_minutes": 2,
     "source_path": "docs/WORK_PLAN.md",
@@ -490,7 +490,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/imaging-feasibility-analysis-procedure",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 2630,
     "reading_minutes": 11,
     "source_path": "guide/imaging-feasibility-analysis-procedure.md",
@@ -706,7 +706,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/integrated-erd",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 4922,
     "reading_minutes": 20,
     "source_path": "guide/integrated-ERD.md",
@@ -782,7 +782,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/korea-eo-sar-data-level-definitions",
-    "updated_at": "2026-03-05T15:34:58Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 675,
     "reading_minutes": 3,
     "source_path": "guide/korea-eo-sar-data-level-definitions.md",
@@ -853,7 +853,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/leo-satellite-operations-scheduling-and-commanding",
-    "updated_at": "2026-03-14T08:30:01Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 5246,
     "reading_minutes": 21,
     "source_path": "guide/leo-satellite-operations-scheduling-and-commanding.md",
@@ -1884,7 +1884,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/modeling-erd",
-    "updated_at": "2026-03-14T08:27:55Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 1943,
     "reading_minutes": 8,
     "source_path": "guide/modeling-ERD.md",
@@ -2025,7 +2025,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/modeling-feasibility-v2",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 10230,
     "reading_minutes": 41,
     "source_path": "guide/modeling-feasibility-v2.md",
@@ -2646,7 +2646,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/0-integrated-erd",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 6589,
     "reading_minutes": 27,
     "source_path": "guide/modeling/0.integrated-ERD.md",
@@ -2782,7 +2782,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/1-customer-account-domain",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 834,
     "reading_minutes": 4,
     "source_path": "guide/modeling/1.customer-account-domain.md",
@@ -2893,7 +2893,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/2-satellite-asset-domain",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 882,
     "reading_minutes": 4,
     "source_path": "guide/modeling/2.satellite-asset-domain.md",
@@ -2994,7 +2994,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/3-orbit-ground-domain",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 939,
     "reading_minutes": 4,
     "source_path": "guide/modeling/3.orbit-ground-domain.md",
@@ -3105,7 +3105,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/4-tasking-feasibility-domain",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 3805,
     "reading_minutes": 16,
     "source_path": "guide/modeling/4.tasking-feasibility-domain.md",
@@ -3376,7 +3376,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/5-scheduling-execution-domain",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 1196,
     "reading_minutes": 5,
     "source_path": "guide/modeling/5.scheduling-execution-domain.md",
@@ -3487,7 +3487,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/6-product-downlink-delivery-domain",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 1448,
     "reading_minutes": 6,
     "source_path": "guide/modeling/6.product-downlink-delivery-domain.md",
@@ -3618,7 +3618,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/7-audit-trace-domain",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 285,
     "reading_minutes": 2,
     "source_path": "guide/modeling/7.audit-trace-domain.md",
@@ -3674,7 +3674,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/modleing-erd-v2",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 2965,
     "reading_minutes": 12,
     "source_path": "guide/modleing-ERD-v2.md",
@@ -3875,7 +3875,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/readme",
-    "updated_at": "2026-03-07T00:26:51Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 20,
     "reading_minutes": 1,
     "source_path": "guide/README.md",
@@ -3890,7 +3890,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/satellite-imagery-data-levels-l0-to-l4",
-    "updated_at": "2026-03-05T15:17:12Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 505,
     "reading_minutes": 3,
     "source_path": "guide/satellite-imagery-data-levels-l0-to-l4.md",
@@ -4026,7 +4026,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/satellite-imagery-transmission-and-processing-flow",
-    "updated_at": "2026-03-05T14:59:52Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 1650,
     "reading_minutes": 7,
     "source_path": "guide/satellite-imagery-transmission-and-processing-flow.md",
@@ -4492,7 +4492,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/satellite-operations-platform-domain-model",
-    "updated_at": "2026-03-14T08:30:01Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 10308,
     "reading_minutes": 42,
     "source_path": "guide/satellite-operations-platform-domain-model.md",
@@ -5333,7 +5333,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/satellite-tasking-feasibility-and-probability-review",
-    "updated_at": "2026-03-14T08:30:01Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 3658,
     "reading_minutes": 15,
     "source_path": "guide/satellite-tasking-feasibility-and-probability-review.md",
@@ -5739,7 +5739,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/satellite-tasking-ui-benchmark-and-layouts",
-    "updated_at": "2026-03-07T02:17:14Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 633,
     "reading_minutes": 3,
     "source_path": "guide/satellite-tasking-ui-benchmark-and-layouts.md",
@@ -5754,7 +5754,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/satellite-tasking-ui-reference-gallery",
-    "updated_at": "2026-03-07T01:36:02Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 403,
     "reading_minutes": 2,
     "source_path": "guide/satellite-tasking-ui-reference-gallery.md",
@@ -5825,7 +5825,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/sattie-tasking-screen-specification",
-    "updated_at": "2026-03-07T01:36:07Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 1846,
     "reading_minutes": 8,
     "source_path": "guide/sattie-tasking-screen-specification.md",
@@ -5966,7 +5966,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/sattie-tasking-user-menu-ia",
-    "updated_at": "2026-03-07T01:35:57Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 1307,
     "reading_minutes": 6,
     "source_path": "guide/sattie-tasking-user-menu-ia.md",
@@ -6092,7 +6092,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/sattie-api-client-guide",
-    "updated_at": "2026-03-07T00:26:41Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 759,
     "reading_minutes": 4,
     "source_path": "guide/개발가이드/sattie-api-client-guide.md",
@@ -6213,7 +6213,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/sattie-maintainer-guide",
-    "updated_at": "2026-03-07T00:26:41Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 722,
     "reading_minutes": 3,
     "source_path": "guide/개발가이드/sattie-maintainer-guide.md",
@@ -6359,7 +6359,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/sattie-system-design",
-    "updated_at": "2026-03-07T00:26:41Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 1159,
     "reading_minutes": 5,
     "source_path": "guide/개발가이드/sattie-system-design.md",
@@ -6535,7 +6535,7 @@
     "category": "guide",
     "tags": [],
     "public_url": "/p/document",
-    "updated_at": "2026-03-13T16:22:53Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 4375,
     "reading_minutes": 18,
     "source_path": "guide/개발가이드/통합설계.md",
@@ -6676,7 +6676,7 @@
     "category": "uploads",
     "tags": [],
     "public_url": "/p/1",
-    "updated_at": "2026-03-14T09:55:28Z",
+    "updated_at": "2026-03-14T17:15:00Z",
     "word_count": 1744,
     "reading_minutes": 7,
     "source_path": "uploads/docs/국내 위성 통신가능 시각 조사 종합보고서 별첨1_대한민국 직접 수행 위성촬영영상 위성의 공전주기 및 국내 지상국 통신 가능 시각 조사.md",
@@ -6777,7 +6777,7 @@
     "category": "uploads",
     "tags": [],
     "public_url": "/p/2-tle",
-    "updated_at": "2026-03-14T09:55:34Z",
+    "updated_at": "2026-03-14T17:15:00Z",
     "word_count": 1486,
     "reading_minutes": 6,
     "source_path": "uploads/docs/국내 위성 통신가능 시각 조사 종합보고서 별첨2_TLE 기반 국내 지상국 통신가능 시각 계산 방법.md",
@@ -6948,7 +6948,7 @@
     "category": "uploads",
     "tags": [],
     "public_url": "/p/3-tle",
-    "updated_at": "2026-03-14T09:55:45Z",
+    "updated_at": "2026-03-14T17:15:00Z",
     "word_count": 1435,
     "reading_minutes": 6,
     "source_path": "uploads/docs/국내 위성 통신가능 시각 조사 종합보고서 별첨3_국내 지상국 좌표 및 공개 TLE 기반 패스 계산 예시.md",
@@ -7049,7 +7049,7 @@
     "category": "uploads",
     "tags": [],
     "public_url": "/p/document-2",
-    "updated_at": "2026-03-14T09:55:17Z",
+    "updated_at": "2026-03-14T17:15:00Z",
     "word_count": 1214,
     "reading_minutes": 5,
     "source_path": "uploads/docs/국내 위성 통신가능 시각 조사 종합보고서.md",
@@ -7154,13 +7154,805 @@
     "order": 0
   },
   {
+    "slug": "document-3",
+    "title": "수신전처리시스템모델링",
+    "summary": "영상관리시스템(PMS)의 데이터 모델링을 위해서는 **데이터의 생애주기(수신 → 처리 → 저장 → 분석/배포)**와 **운영 자원(서버/사용자/권한)**이라는 두 축을 중심으로 엔터티를 설계해야 합니다.",
+    "category": "uploads",
+    "tags": [],
+    "public_url": "/p/document-3",
+    "updated_at": "2026-03-14T17:15:00Z",
+    "word_count": 2759,
+    "reading_minutes": 12,
+    "source_path": "uploads/docs/수신전처리시스템모델링.md",
+    "is_public": true,
+    "headings": [
+      {
+        "level": 3,
+        "text": "1. 데이터 관리 엔터티 (핵심 데이터)",
+        "anchor": "1"
+      },
+      {
+        "level": 3,
+        "text": "2. 처리 및 작업 관리 엔터티 (작업 추적)",
+        "anchor": "2"
+      },
+      {
+        "level": 3,
+        "text": "3. 사용자 및 권한 엔터티 (운영 및 보안)",
+        "anchor": "3"
+      },
+      {
+        "level": 3,
+        "text": "4. 업무 프로세스 엔터티 (촬영 및 분석)",
+        "anchor": "4"
+      },
+      {
+        "level": 3,
+        "text": "[데이터 모델 관계도 개념(ERD)]",
+        "anchor": "erd"
+      },
+      {
+        "level": 3,
+        "text": "설계를 위한 제언",
+        "anchor": "document"
+      },
+      {
+        "level": 3,
+        "text": "1. 핵심 데이터 모델 상세 속성 (예시)",
+        "anchor": "1-2"
+      },
+      {
+        "level": 3,
+        "text": "2. 설계 시 고려해야 할 중요한 포인트 (Best Practices)",
+        "anchor": "2-best-practices"
+      },
+      {
+        "level": 3,
+        "text": "다음 단계 제안",
+        "anchor": "document-2"
+      },
+      {
+        "level": 3,
+        "text": "1. 설계의 우선순위 (엔터티 생성 순서)",
+        "anchor": "1-3"
+      },
+      {
+        "level": 3,
+        "text": "2. 왜 이 순서인가요? (데이터 흐름의 논리)",
+        "anchor": "2-2"
+      },
+      {
+        "level": 3,
+        "text": "3. 실제 적용을 위한 '선행 작업' 추천",
+        "anchor": "3-2"
+      },
+      {
+        "level": 3,
+        "text": "1. 핵심 데이터 모델링 (스키마 설계)",
+        "anchor": "1-4"
+      },
+      {
+        "level": 3,
+        "text": "2. 재처리 로직 구현 (데이터 흐름)",
+        "anchor": "2-3"
+      },
+      {
+        "level": 3,
+        "text": "3. 테이블 간의 관계 (ERD 관점)",
+        "anchor": "3-erd"
+      },
+      {
+        "level": 3,
+        "text": "💡 설계를 위한 팁",
+        "anchor": "document-3"
+      },
+      {
+        "level": 3,
+        "text": "1. 프로세스 로직 (Workflow)",
+        "anchor": "1-workflow"
+      },
+      {
+        "level": 3,
+        "text": "2. 데이터 모델링 (상세 ERD 구성)",
+        "anchor": "2-erd"
+      },
+      {
+        "level": 3,
+        "text": "3. 개발 및 설계 시 고려사항 (프로세스 로직)",
+        "anchor": "3-3"
+      },
+      {
+        "level": 3,
+        "text": "다음 단계 제안",
+        "anchor": "document-4"
+      },
+      {
+        "level": 3,
+        "text": "1. 기능 설계서 (Functional Specification)",
+        "anchor": "1-functional-specification"
+      },
+      {
+        "level": 3,
+        "text": "2. 화면 설계서 (UI/UX Specification)",
+        "anchor": "2-ui-ux-specification"
+      },
+      {
+        "level": 3,
+        "text": "3. DB 설계서 (Database Specification)",
+        "anchor": "3-db-database-specification"
+      },
+      {
+        "level": 3,
+        "text": "[설계의 핵심: 프로세스-데이터 연계]",
+        "anchor": "document-5"
+      },
+      {
+        "level": 3,
+        "text": "정상 수신 영상 데이터 처리 시퀀스",
+        "anchor": "document-6"
+      },
+      {
+        "level": 3,
+        "text": "단계별 상세 처리 로직",
+        "anchor": "document-7"
+      },
+      {
+        "level": 3,
+        "text": "1. 재처리 요청 시퀀스 다이어그램",
+        "anchor": "1-5"
+      },
+      {
+        "level": 3,
+        "text": "2. REST API 정의서 (초안)",
+        "anchor": "2-rest-api"
+      },
+      {
+        "level": 3,
+        "text": "3. 실무 설계를 위한 제언",
+        "anchor": "3-4"
+      }
+    ],
+    "order": 0
+  },
+  {
+    "slug": "on-device-vla-vision-language-action",
+    "title": "온디바이스(on-device) VLA(Vision-Language-Action)에서 실제 연구·개발",
+    "summary": "온디바이스(on-device) **VLA(Vision-Language-Action)**에서 실제 연구·개발 시 가장 어려운 문제는 단순히 모델이 크다는 수준이 아니라 **시스템·데이터·로봇 제어가 동시에 얽혀 있는 구조적 문제**입니다. 아래는 각 항목을 **실제 엔지니어링 관점에서 좀 더 세분화한 내용**입니다.",
+    "category": "uploads",
+    "tags": [],
+    "public_url": "/p/on-device-vla-vision-language-action",
+    "updated_at": "2026-03-14T17:15:00Z",
+    "word_count": 5382,
+    "reading_minutes": 22,
+    "source_path": "uploads/docs/온디바이스_on-device_ _VLA_Vision-Language-Action_.md",
+    "is_public": true,
+    "headings": [
+      {
+        "level": 2,
+        "text": "주요 원인",
+        "anchor": "document"
+      },
+      {
+        "level": 3,
+        "text": "(1) 멀티모달 입력 처리 지연",
+        "anchor": "1"
+      },
+      {
+        "level": 3,
+        "text": "(2) Vision encoder 지연",
+        "anchor": "2-vision-encoder"
+      },
+      {
+        "level": 3,
+        "text": "(3) Attention 연산 증가",
+        "anchor": "3-attention"
+      },
+      {
+        "level": 2,
+        "text": "해결 방향 (연구 흐름)",
+        "anchor": "document-2"
+      },
+      {
+        "level": 2,
+        "text": "주요 문제",
+        "anchor": "document-3"
+      },
+      {
+        "level": 3,
+        "text": "(1) Vision encoder FLOPs",
+        "anchor": "1-vision-encoder-flops"
+      },
+      {
+        "level": 3,
+        "text": "(2) Memory bandwidth",
+        "anchor": "2-memory-bandwidth"
+      },
+      {
+        "level": 3,
+        "text": "(3) KV cache memory",
+        "anchor": "3-kv-cache-memory"
+      },
+      {
+        "level": 2,
+        "text": "해결 방향",
+        "anchor": "document-4"
+      },
+      {
+        "level": 2,
+        "text": "이유",
+        "anchor": "document-5"
+      },
+      {
+        "level": 3,
+        "text": "(1) 수집 비용",
+        "anchor": "1-2"
+      },
+      {
+        "level": 3,
+        "text": "(2) 실제 환경 다양성",
+        "anchor": "2"
+      },
+      {
+        "level": 3,
+        "text": "(3) 행동 레이블 문제",
+        "anchor": "3"
+      },
+      {
+        "level": 2,
+        "text": "해결 전략",
+        "anchor": "document-6"
+      },
+      {
+        "level": 3,
+        "text": "simulation learning",
+        "anchor": "simulation-learning"
+      },
+      {
+        "level": 3,
+        "text": "teleoperation data",
+        "anchor": "teleoperation-data"
+      },
+      {
+        "level": 3,
+        "text": "imitation learning",
+        "anchor": "imitation-learning"
+      },
+      {
+        "level": 2,
+        "text": "주요 문제",
+        "anchor": "document-7"
+      },
+      {
+        "level": 3,
+        "text": "(1) AI 행동의 불확실성",
+        "anchor": "1-ai"
+      },
+      {
+        "level": 3,
+        "text": "(2) 물리적 충돌 위험",
+        "anchor": "2-2"
+      },
+      {
+        "level": 3,
+        "text": "(3) 지연 문제",
+        "anchor": "3-2"
+      },
+      {
+        "level": 2,
+        "text": "해결 구조",
+        "anchor": "document-8"
+      },
+      {
+        "level": 3,
+        "text": "Safety layer 예",
+        "anchor": "safety-layer"
+      },
+      {
+        "level": 3,
+        "text": "watchdog 시스템",
+        "anchor": "watchdog"
+      },
+      {
+        "level": 2,
+        "text": "(1) 이미지 → 토큰 변환 비용",
+        "anchor": "1-3"
+      },
+      {
+        "level": 2,
+        "text": "(2) Vision Transformer FLOPs",
+        "anchor": "2-vision-transformer-flops"
+      },
+      {
+        "level": 2,
+        "text": "(3) 멀티카메라 환경",
+        "anchor": "3-3"
+      },
+      {
+        "level": 2,
+        "text": "(4) 매 프레임 전체 연산",
+        "anchor": "4"
+      },
+      {
+        "level": 2,
+        "text": "실제 연구에서 사용하는 해결 전략",
+        "anchor": "document-9"
+      },
+      {
+        "level": 3,
+        "text": "vision feature caching",
+        "anchor": "vision-feature-caching"
+      },
+      {
+        "level": 3,
+        "text": "frame difference update",
+        "anchor": "frame-difference-update"
+      },
+      {
+        "level": 3,
+        "text": "region-of-interest encoding",
+        "anchor": "region-of-interest-encoding"
+      },
+      {
+        "level": 2,
+        "text": "기본 구조",
+        "anchor": "document-10"
+      },
+      {
+        "level": 2,
+        "text": "실제 구조 (asynchronous pipeline)",
+        "anchor": "asynchronous-pipeline"
+      },
+      {
+        "level": 2,
+        "text": "latency budget 예시",
+        "anchor": "latency-budget"
+      },
+      {
+        "level": 2,
+        "text": "핵심 기술",
+        "anchor": "document-11"
+      },
+      {
+        "level": 3,
+        "text": "KV cache",
+        "anchor": "kv-cache"
+      },
+      {
+        "level": 3,
+        "text": "vision token compression",
+        "anchor": "vision-token-compression"
+      },
+      {
+        "level": 3,
+        "text": "speculative action prediction",
+        "anchor": "speculative-action-prediction"
+      },
+      {
+        "level": 3,
+        "text": "frame skipping",
+        "anchor": "frame-skipping"
+      },
+      {
+        "level": 2,
+        "text": "(1) Perception–Reasoning–Action loop 문제",
+        "anchor": "1-perceptionreasoningaction-loop"
+      },
+      {
+        "level": 2,
+        "text": "(2) Vision 처리 속도 한계",
+        "anchor": "2-vision"
+      },
+      {
+        "level": 2,
+        "text": "(3) Transformer 구조의 계산 특성",
+        "anchor": "3-transformer"
+      },
+      {
+        "level": 2,
+        "text": "(4) Safety override 문제",
+        "anchor": "4-safety-override"
+      },
+      {
+        "level": 2,
+        "text": "1. “100ms 추론 가능”",
+        "anchor": "1-100ms"
+      },
+      {
+        "level": 2,
+        "text": "2. Vision encoder 계산 무시",
+        "anchor": "2-vision-encoder-2"
+      },
+      {
+        "level": 2,
+        "text": "3. 데이터 확보 과장",
+        "anchor": "3-4"
+      },
+      {
+        "level": 2,
+        "text": "4. Simulation 데이터만 사용",
+        "anchor": "4-simulation"
+      },
+      {
+        "level": 2,
+        "text": "5. Safety 시스템 설명 부족",
+        "anchor": "5-safety"
+      },
+      {
+        "level": 2,
+        "text": "6. 멀티모달 토큰 폭발 문제 무시",
+        "anchor": "6"
+      },
+      {
+        "level": 2,
+        "text": "7. 실제 로봇 제어 경험 부족",
+        "anchor": "7"
+      },
+      {
+        "level": 2,
+        "text": "8. 온디바이스 하드웨어 무시",
+        "anchor": "8"
+      },
+      {
+        "level": 2,
+        "text": "9. Long-horizon task 과장",
+        "anchor": "9-long-horizon-task"
+      },
+      {
+        "level": 2,
+        "text": "10. 일반화 능력 과장",
+        "anchor": "10"
+      },
+      {
+        "level": 3,
+        "text": "접근 방식",
+        "anchor": "document-12"
+      },
+      {
+        "level": 3,
+        "text": "핵심 특징",
+        "anchor": "document-13"
+      },
+      {
+        "level": 3,
+        "text": "강점",
+        "anchor": "document-14"
+      },
+      {
+        "level": 3,
+        "text": "약점",
+        "anchor": "document-15"
+      },
+      {
+        "level": 3,
+        "text": "접근 방식",
+        "anchor": "document-16"
+      },
+      {
+        "level": 3,
+        "text": "강점",
+        "anchor": "document-17"
+      },
+      {
+        "level": 3,
+        "text": "약점",
+        "anchor": "document-18"
+      },
+      {
+        "level": 3,
+        "text": "접근 방식",
+        "anchor": "document-19"
+      },
+      {
+        "level": 3,
+        "text": "강점",
+        "anchor": "document-20"
+      },
+      {
+        "level": 3,
+        "text": "약점",
+        "anchor": "document-21"
+      },
+      {
+        "level": 3,
+        "text": "접근 방식",
+        "anchor": "document-22"
+      },
+      {
+        "level": 3,
+        "text": "GR00T",
+        "anchor": "gr00t"
+      },
+      {
+        "level": 3,
+        "text": "강점",
+        "anchor": "document-23"
+      },
+      {
+        "level": 3,
+        "text": "약점",
+        "anchor": "document-24"
+      },
+      {
+        "level": 3,
+        "text": "접근 방식",
+        "anchor": "document-25"
+      },
+      {
+        "level": 3,
+        "text": "강점",
+        "anchor": "document-26"
+      },
+      {
+        "level": 3,
+        "text": "약점",
+        "anchor": "document-27"
+      },
+      {
+        "level": 2,
+        "text": "접근 1 — End-to-End VLA",
+        "anchor": "1-end-to-end-vla"
+      },
+      {
+        "level": 2,
+        "text": "접근 2 — Hybrid Robotics",
+        "anchor": "2-hybrid-robotics"
+      },
+      {
+        "level": 2,
+        "text": "(1) 로봇 행동 데이터 부족",
+        "anchor": "1-4"
+      },
+      {
+        "level": 2,
+        "text": "(2) 로봇 + AI 통합 조직 부족",
+        "anchor": "2-ai"
+      },
+      {
+        "level": 2,
+        "text": "(3) 온디바이스 AI 반도체 생태계",
+        "anchor": "3-ai"
+      },
+      {
+        "level": 2,
+        "text": "(4) 로봇 실증 환경 부족",
+        "anchor": "4-2"
+      },
+      {
+        "level": 2,
+        "text": "(5) 시스템 엔지니어 부족",
+        "anchor": "5"
+      },
+      {
+        "level": 2,
+        "text": "1",
+        "anchor": "1-5"
+      },
+      {
+        "level": 2,
+        "text": "2",
+        "anchor": "2-3"
+      },
+      {
+        "level": 2,
+        "text": "3",
+        "anchor": "3-5"
+      },
+      {
+        "level": 2,
+        "text": "4",
+        "anchor": "4-3"
+      },
+      {
+        "level": 2,
+        "text": "5",
+        "anchor": "5-2"
+      },
+      {
+        "level": 2,
+        "text": "6",
+        "anchor": "6-2"
+      },
+      {
+        "level": 2,
+        "text": "7",
+        "anchor": "7-2"
+      },
+      {
+        "level": 2,
+        "text": "8",
+        "anchor": "8-2"
+      },
+      {
+        "level": 2,
+        "text": "9",
+        "anchor": "9"
+      },
+      {
+        "level": 2,
+        "text": "10",
+        "anchor": "10-2"
+      },
+      {
+        "level": 3,
+        "text": "1. RGB camera pipeline",
+        "anchor": "1-rgb-camera-pipeline"
+      },
+      {
+        "level": 3,
+        "text": "2. Depth sensing",
+        "anchor": "2-depth-sensing"
+      },
+      {
+        "level": 3,
+        "text": "3. Robot proprioception",
+        "anchor": "3-robot-proprioception"
+      },
+      {
+        "level": 3,
+        "text": "4. Object detection",
+        "anchor": "4-object-detection"
+      },
+      {
+        "level": 3,
+        "text": "5. Pose estimation",
+        "anchor": "5-pose-estimation"
+      },
+      {
+        "level": 3,
+        "text": "6. Scene understanding",
+        "anchor": "6-scene-understanding"
+      },
+      {
+        "level": 3,
+        "text": "7. Vision transformer encoder",
+        "anchor": "7-vision-transformer-encoder"
+      },
+      {
+        "level": 3,
+        "text": "8. Vision token compression",
+        "anchor": "8-vision-token-compression"
+      },
+      {
+        "level": 3,
+        "text": "9. Multimodal transformer",
+        "anchor": "9-multimodal-transformer"
+      },
+      {
+        "level": 3,
+        "text": "10. KV cache system",
+        "anchor": "10-kv-cache-system"
+      },
+      {
+        "level": 3,
+        "text": "11. Instruction tuning",
+        "anchor": "11-instruction-tuning"
+      },
+      {
+        "level": 3,
+        "text": "12. Action decoding",
+        "anchor": "12-action-decoding"
+      },
+      {
+        "level": 3,
+        "text": "13. Trajectory prediction",
+        "anchor": "13-trajectory-prediction"
+      },
+      {
+        "level": 3,
+        "text": "14. Motion planning",
+        "anchor": "14-motion-planning"
+      },
+      {
+        "level": 3,
+        "text": "15. Low-level control",
+        "anchor": "15-low-level-control"
+      },
+      {
+        "level": 2,
+        "text": "실제 구조",
+        "anchor": "document-28"
+      },
+      {
+        "level": 2,
+        "text": "latency budget 예시",
+        "anchor": "latency-budget-2"
+      },
+      {
+        "level": 2,
+        "text": "핵심 최적화 기술",
+        "anchor": "document-29"
+      },
+      {
+        "level": 3,
+        "text": "Vision feature cache",
+        "anchor": "vision-feature-cache"
+      },
+      {
+        "level": 3,
+        "text": "Token reduction",
+        "anchor": "token-reduction"
+      },
+      {
+        "level": 3,
+        "text": "Asynchronous inference",
+        "anchor": "asynchronous-inference"
+      },
+      {
+        "level": 3,
+        "text": "Frame skipping",
+        "anchor": "frame-skipping-2"
+      },
+      {
+        "level": 3,
+        "text": "해결",
+        "anchor": "document-30"
+      },
+      {
+        "level": 3,
+        "text": "해결",
+        "anchor": "document-31"
+      },
+      {
+        "level": 3,
+        "text": "특징",
+        "anchor": "document-32"
+      },
+      {
+        "level": 2,
+        "text": "주요 구조 유형",
+        "anchor": "document-33"
+      },
+      {
+        "level": 3,
+        "text": "① Robotics Transformer",
+        "anchor": "robotics-transformer"
+      },
+      {
+        "level": 3,
+        "text": "② Foundation Robot Model",
+        "anchor": "foundation-robot-model"
+      },
+      {
+        "level": 3,
+        "text": "③ Dual-System VLA",
+        "anchor": "dual-system-vla"
+      },
+      {
+        "level": 3,
+        "text": "④ Predictive VLA",
+        "anchor": "predictive-vla"
+      },
+      {
+        "level": 2,
+        "text": "NVIDIA Jetson Orin",
+        "anchor": "nvidia-jetson-orin"
+      },
+      {
+        "level": 2,
+        "text": "Qualcomm RB5 / RB6",
+        "anchor": "qualcomm-rb5-rb6"
+      },
+      {
+        "level": 2,
+        "text": "Intel Core Ultra + NPU",
+        "anchor": "intel-core-ultra-npu"
+      },
+      {
+        "level": 2,
+        "text": "Custom Robotics NPU",
+        "anchor": "custom-robotics-npu"
+      }
+    ],
+    "order": 0
+  },
+  {
     "slug": "east-up",
     "title": "지도를 90도 돌려보면 무엇이 보일까요? 주한미군 사령관이 제안한 'East-Up' 지도",
     "summary": "최근 유엔사·연합사·주한미군 사령관인 **재비어 브런슨(Gen. Xavier T. Brunson)** 장군이 기고한 칼럼이 화제가 되고 있는데요. 바로 **\"지도를 동쪽이 위로 가게(East-Up) 돌려보라\"**는 제안입니다.",
     "category": "uploads",
     "tags": [],
     "public_url": "/p/east-up",
-    "updated_at": "2026-03-14T08:41:11Z",
+    "updated_at": "2026-03-14T09:43:50Z",
     "word_count": 349,
     "reading_minutes": 2,
     "source_path": "uploads/docs/주한미군 사령관 East-Up지도.md",
@@ -7195,13 +7987,13 @@
     "order": 0
   },
   {
-    "slug": "document-3",
+    "slug": "document-4",
     "title": "지상기지국에서 위성으로 영상촬영 요청 후 위성사진 수신까지의 절차 조사",
     "summary": "기준일: 2026-03-07",
     "category": "uploads",
     "tags": [],
-    "public_url": "/p/document-3",
-    "updated_at": "2026-03-14T09:56:25Z",
+    "public_url": "/p/document-4",
+    "updated_at": "2026-03-14T17:15:00Z",
     "word_count": 2814,
     "reading_minutes": 12,
     "source_path": "uploads/docs/지상기지국에서 위성으로 영상촬영 요청 후 수신까지 절차 조사.md",
@@ -7386,6 +8178,77 @@
         "level": 2,
         "text": "출처",
         "anchor": "document-12"
+      }
+    ],
+    "order": 0
+  },
+  {
+    "slug": "l0-l1",
+    "title": "추가정보 L0 L1",
+    "summary": "위성 데이터 처리 과정에서 **CADU**와 **L0**는 데이터의 **'가공 전 상태'**와 **'가공 후 첫 번째 단위'**를 구분하는 가장 중요한 기준입니다. 이 둘의 차이를 명확히 이해하면 데이터 파이프라인의 시작점을 정확히 파악할 수 있습니다.",
+    "category": "uploads",
+    "tags": [],
+    "public_url": "/p/l0-l1",
+    "updated_at": "2026-03-14T17:15:00Z",
+    "word_count": 919,
+    "reading_minutes": 4,
+    "source_path": "uploads/docs/추가정보-L0-L1.md",
+    "is_public": true,
+    "headings": [
+      {
+        "level": 3,
+        "text": "CADU L0 L1",
+        "anchor": "cadu-l0-l1"
+      },
+      {
+        "level": 3,
+        "text": "1. CADU (Channel Access Data Unit) : 물리 계층의 원시 데이터",
+        "anchor": "1-cadu-channel-access-data-unit"
+      },
+      {
+        "level": 3,
+        "text": "2. L0 (Level 0) 영상 : 논리 계층의 원시 영상",
+        "anchor": "2-l0-level-0"
+      },
+      {
+        "level": 3,
+        "text": "3. 비교 요약표",
+        "anchor": "3"
+      },
+      {
+        "level": 3,
+        "text": "핵심 요약: 왜 나누어 관리하나요?",
+        "anchor": "document"
+      },
+      {
+        "level": 3,
+        "text": "L0 데이터 구성요소별 상세 역할",
+        "anchor": "l0"
+      },
+      {
+        "level": 3,
+        "text": "왜 이렇게 파일을 나누어 관리하나요?",
+        "anchor": "document-2"
+      },
+      {
+        "level": 3,
+        "text": "핵심 프로세스 요약",
+        "anchor": "document-3"
+      },
+      {
+        "level": 3,
+        "text": "L1 파일 구성요소의 역할",
+        "anchor": "l1"
+      },
+      {
+        "level": 3,
+        "text": "왜 이 파일들이 함께 존재해야 하나요?",
+        "anchor": "document-4"
+      },
+      {
+        "level": 3,
+        "text": "데이터 처리 흐름 요약",
+        "anchor": "document-5"
       }
     ],
     "order": 0
